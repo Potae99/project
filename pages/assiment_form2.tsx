@@ -70,7 +70,7 @@ export default function Homepage(){
  
    
      return ( <>
-     <div className="flex-col space-y-3 bg-gray-300 block  h-full justify-center p-4">
+     <div className="flex-col space-y-3 bg-gray-300 block  h-full min-h-screen justify-center p-4">
          <div className=" text-center ">
           <h1>แบบประเมินการสอนของอาจาร์ยโดยนิสิต</h1>
           <h2>หลักสูตรประกาศนียบัตรผู้ช่วยพยาบาล</h2>
@@ -160,9 +160,12 @@ export default function Homepage(){
              </form>
  
          </div>
- 
-        
- 
+         <div className=' w-3/6'>
+         <button className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  px-12 py-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="defaultModal">
+          บันทึก
+         </button> 
+
+        </div>
      </div>
   
      </>

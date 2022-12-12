@@ -84,7 +84,7 @@ export default function Homepage0(){
     
 
   return ( <> 
-  <div className=" bg-gray-300 block h-screen justify-center p-4  flex-col space-y-2 ">
+  <div className=" bg-gray-300 block min-h-screen  h-full justify-center p-4  flex-col space-y-2 ">
     <h1>ผลการประเมิน</h1>
     <p>รายวิชา</p>
     <div className=" overflow-x-auto relative">

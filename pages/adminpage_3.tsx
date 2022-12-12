@@ -28,10 +28,10 @@ export default function Example() {
 
   return (
   
-    <div className=" flex-col space-y-3 bg-gray-300 block h-screen justify-center p-4" >
+    <div className="   flex-col space-y-3 bg-gray-300 block h-full  min-h-screen  justify-center p-4" >
       <div className=' flex'>
         <div className=' w-5/6'><h1>ภาคการศึกษา</h1></div>
-        <div className=' w-1/6'>
+        <div className=' w-3/6'>
          <button className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  px-12 py-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="defaultModal">
           บันทึก
          </button> 
@@ -49,7 +49,8 @@ export default function Example() {
 
       </div>
       <h2>รายวิชา </h2>
-      <table className=" w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <div className='overflow-x-auto relative'>
+        <table className=" w-full text-sm text-left text-gray-500 dark:text-gray-400">
        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
          <tr  >
             <th scope="col" className="py-3 px-6" >ลำดับ</th>
@@ -72,7 +73,8 @@ export default function Example() {
        ))} 
 
   
-     </table>
+        </table>
+      </div>
      <h2 className=' text-center' >****ลำดับเรียงจาก มาก ไป น้อย ปีการศึกษา****</h2>
 
     </div>

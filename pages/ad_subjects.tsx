@@ -4,7 +4,7 @@ export default function subjects(){
   
     
     return ( <> 
-        <div className=" bg-gray-300 block h-screen justify-center p-4">
+        <div className=" bg-gray-300 block h-full min-h-screen justify-center p-4">
 
           <div>
             <h1>รหัสวิชา</h1>

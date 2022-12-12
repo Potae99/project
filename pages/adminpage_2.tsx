@@ -33,7 +33,7 @@ export default function Example() {
 
   return (
   
-    <div className=" flex-col space-y-3 bg-gray-300 block h-screen justify-center p-4" >
+    <div className=" flex-col space-y-3 bg-gray-300 block h-full min-h-screen justify-center p-4" >
         <svg onClick={onclick}  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" absolute right-0 w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
         </svg>
@@ -61,8 +61,8 @@ export default function Example() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute   left-0 mt-3 w-56  origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <div className="px-1 py-1 ">
+          <Menu.Items className="absolute inset-0 z-50   left-0 mt-3 w-56  origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <div className="px-1 py-1 bg-orange-100 rounded-lg ">
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -108,7 +108,7 @@ export default function Example() {
                 )}
               </Menu.Item>
             </div>
-            <div className="px-1 py-1">
+            <div className="px-1 py-1 bg-orange-100 rounded-lg">
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -154,7 +154,7 @@ export default function Example() {
                 )}
               </Menu.Item>
             </div>
-            <div className="px-1 py-1">
+            <div className="px-1 py-1 bg-orange-100 rounded-lg">
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -191,7 +191,8 @@ export default function Example() {
                 <option>รวม/....</option>
             </select>
         </div>
-        <table className=" w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <div className='overflow-x-auto relative'> 
+          <table className=" w-full text-sm text-left text-gray-500 dark:text-gray-400">
        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
          <tr  >
             <th scope="col" className="py-3 px-6" >ลำดับ</th>
@@ -214,7 +215,8 @@ export default function Example() {
        ))} 
 
   
-     </table>
+          </table>
+        </div>
      <h3>
       กดแล้วเด้งรายระเอียดนักเรียน
      </h3>

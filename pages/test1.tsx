@@ -5,7 +5,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 export default function Homepage1() {
     const [showModal, setShowModal] = React.useState(false);
-    const onclick = async (event) => {
+    const onclick = async (_event) => {
 
     window.location.assign("/adminpage_2")
 

@@ -41,14 +41,14 @@ export default function Homepage1() {
 
   return (
   
-    <div className=" flex-col space-y-3 bg-gray-300 block h-screen justify-center p-4" >
+    <div className=" bg-gray-300 block  h-full min-h-screen  justify-center p-4  flex-col space-y-2" >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
         </svg>
         <h1>ภาคการศึกษา</h1>
         <p>xxxxx</p>
         <p>รายวิชา</p>
-      <Menu as="div" className="relative inline-block  text-left">
+      <Menu as="div" className="relative inline-block  text-left ">
         <div>
           <Menu.Button className=" inline-flex w-full justify-center rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             รหัสวิชา
@@ -67,8 +67,8 @@ export default function Homepage1() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute   left-0 mt-3 w-56  origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <div className="px-1 py-1 ">
+          <Menu.Items className=" inset-0 z-50  absolute  left-0 mt-3 w-56  origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <div className="px-1 py-1  bg-orange-100 rounded-lg  ">
               <Menu.Item>
                 {({ active }) => (
                   <button onClick={onclick}
@@ -78,6 +78,52 @@ export default function Homepage1() {
                   >
                     {active ? (
                       <EditActiveIcon
+                        className="mr-2 h-5 w-5 "
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <EditInactiveIcon
+                        className="mr-2 h-5 w-5"
+                        aria-hidden="true"
+                      />
+                    )}
+                    xxxxxxxxxxx
+                  </button>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <button onClick={onclick}
+                    className={`${
+                      active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                    } group flex w-full items-center  bg-rounded-md px-2 py-2 text-sm`}
+                  >
+                    {active ? (
+                      <EditInactiveIcon
+                        className="mr-2 h-5 w-5"
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <EditInactiveIcon
+                        className="mr-2 h-5 w-5"
+                        aria-hidden="true"
+                      />
+                    )}
+                    xxxxxxxxxxx
+                  </button>
+                )}
+              </Menu.Item>
+            </div>
+            <div className="px-1 py-1 bg-orange-100 rounded-lg" >
+              <Menu.Item>
+                {({ active }) => (
+                  <button onClick={onclick}
+                    className={`${
+                      active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                  >
+                    {active ? (
+                      <EditInactiveIcon
                         className="mr-2 h-5 w-5"
                         aria-hidden="true"
                       />
@@ -114,53 +160,7 @@ export default function Homepage1() {
                 )}
               </Menu.Item>
             </div>
-            <div className="px-1 py-1">
-              <Menu.Item>
-                {({ active }) => (
-                  <button onClick={onclick}
-                    className={`${
-                      active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    {active ? (
-                      <EditInactiveIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <EditInactiveIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    )}
-                    xxxxxxxxxxx
-                  </button>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <button onClick={onclick}
-                    className={`${
-                      active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    {active ? (
-                      <EditInactiveIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <EditInactiveIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    )}
-                    xxxxxxxxxxx
-                  </button>
-                )}
-              </Menu.Item>
-            </div>
-            <div className="px-1 py-1">
+            <div className="px-1 py-1 bg-orange-100 rounded-lg">
               <Menu.Item>
                 {({ active }) => (
                   <button onClick={onclick}
@@ -250,7 +250,8 @@ export default function Homepage1() {
       
         </div>
       </div>
-     <table className=" w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <div className=" overflow-x-auto relative">
+     <table className="  w-full  text-sm text-left text-gray-500 dark:text-gray-400">
        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
          <tr  >
             <th scope="col" className="py-3 px-6" >ลำดับ</th>
@@ -274,13 +275,14 @@ export default function Homepage1() {
 
   
      </table>
+      </div>
      <div className='flex'>
         <div className=' w-4/6'>
         <button className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  px-12 py-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="defaultModal">
            <a href='/adminpage'>กลับ</a>             
         </button>    
       </div>
-        <div className=' w-2/6'>
+        <div className=' w-3/6'>
          <button className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  px-12 py-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="defaultModal">
           บันทึก
          </button> 
